@@ -1,10 +1,9 @@
+import apiClient from "@/src/apiClient";
 import NewTodoForm from "./NewTodoForm";
 import TodosTable from "./TodosTable";
 import styles from "./page.module.scss";
-import { Api } from "@/api-client/Api";
 
 async function getTodos() {
-  const apiClient = new Api();
   const req = await apiClient.api.getTodos({
     format: "json",
     cache: "no-cache",
