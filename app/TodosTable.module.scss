@@ -1,0 +1,28 @@
+.todosTable {
+    margin: 0 auto;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.1);
+
+    th {
+        text-align: left;
+    }
+
+    td {
+        height: 50px;
+    }
+}
+
+.icon {
+    cursor: pointer;
+    margin-right: 3px;
+    opacity: .5;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.editInput {
+    width: 100%;
+    padding: 10px;
+}
