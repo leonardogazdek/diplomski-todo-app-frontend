@@ -13,7 +13,25 @@ async function getTodos() {
 }
 
 export default async function Home() {
-  const todos = await getTodos();
+  try {
+    var todos = await getTodos();
+  } catch (err) {
+    return (
+      <main className={styles.main}>
+        <div
+          style={{
+            textAlign: "center",
+            display: "flex",
+            alignItems: "center",
+            minHeight: "100vh",
+          }}
+        >
+          <p style={{ flex: 1 }}>Could not load todos</p>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className={styles.main}>
       <NewTodoForm />
