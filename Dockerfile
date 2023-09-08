@@ -1,5 +1,5 @@
 FROM node:16-alpine AS build
-ARG base_url=http://localhost:8888/todo-api
+ARG base_url=http://141.147.10.108.nip.io/todo-api
 ENV NEXT_PUBLIC_BASE_URL=$base_url
 WORKDIR /build
 COPY package.json package-lock.json ./
